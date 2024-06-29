@@ -2,9 +2,9 @@ PODS:
   - camera_avfoundation (0.0.1):
     - Flutter
   - Flutter (1.0.0)
-  - flutter_webrtc (0.9.36):
+  - flutter_webrtc (0.11.0):
     - Flutter
-    - WebRTC-SDK (= 114.5735.08)
+    - WebRTC-SDK (= 125.6422.02)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -12,7 +12,7 @@ PODS:
     - Flutter
   - wakelock (0.0.1):
     - Flutter
-  - WebRTC-SDK (114.5735.08)
+  - WebRTC-SDK (125.6422.02)
 
 DEPENDENCIES:
   - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/ios`)
@@ -43,11 +43,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   camera_avfoundation: 759172d1a77ae7be0de08fc104cfb79738b8a59e
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_webrtc: 55df3aaa802114dad390191a46c2c8d535751268
+  flutter_webrtc: 76cc6996bc9562799a239c94c560d6348ba34ce5
   path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
   permission_handler_apple: 9878588469a2b0d0fc1e048d9f43605f92e6cec2
   wakelock: d0fc7c864128eac40eba1617cb5264d9c940b46f
-  WebRTC-SDK: c24d2a6c9f571f2ed42297cb8ffba9557093142b
+  WebRTC-SDK: 5319b8964f453c5ea6030d93c345082c4f40aa1c
 
 PODFILE CHECKSUM: d5270f59f27c8b549adf721b0c1552db181d04d1
 

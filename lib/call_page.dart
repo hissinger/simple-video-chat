@@ -25,16 +25,15 @@ class _CallPageState extends State<CallPage> {
   @override
   void initState() {
     _remoteRenderer.initialize();
-    _localRenderer.initialize().then((_) {
-      _createLocalStream();
-    });
+    _localRenderer
+        .initialize()
+        .then((_) => _createPeerConnection())
+        .then((_) => _createLocalStream());
+
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     Wakelock.enable(); // prevent screen from sleeping
 
     _connectSocket();
-    _createPeerConnection().then((pc) {
-      _peerConnection = pc;
-    });
 
     super.initState();
   }
@@ -131,7 +130,7 @@ class _CallPageState extends State<CallPage> {
     });
   }
 
-  Future<RTCPeerConnection> _createPeerConnection() async {
+  _createPeerConnection() async {
     Map<String, dynamic> configuration = {
       "iceServers": [
         {
@@ -156,7 +155,7 @@ class _CallPageState extends State<CallPage> {
       setState(() {});
     };
 
-    return pc;
+    _peerConnection = pc;
   }
 
   void _createOffer() async {
