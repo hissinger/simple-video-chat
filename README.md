@@ -17,4 +17,17 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Signaling Server
 
-refer to this [repo](https://github.com/hissinger/simple-video-chat-server)
+this app needs a signaling server. refer to the [repo](https://github.com/hissinger/simple-video-chat-server)
+
+and signaling server url should be set in `lib/call_page.dart` file.
+
+```dart
+  void _connectSocket() {
+    print("connect server");
+    const url = ""; // HERE SET SIGNALING SERVER URL
+    socket = IO.io(url, <String, dynamic>{
+      'transports': ['websocket'],
+      'autoConnect': false,
+    });
+    socket!.connect();
+```
