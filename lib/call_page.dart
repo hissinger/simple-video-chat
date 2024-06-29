@@ -220,18 +220,21 @@ class _CallPageState extends State<CallPage> {
                 left: 20.0,
                 top: 20.0,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(8.0),
                   child: Container(
                     width: orientation == Orientation.portrait ? 90.0 : 120.0,
-                    height: orientation == Orientation.portrait ? 129.0 : 90.0,
+                    height: orientation == Orientation.portrait ? 120.0 : 90.0,
                     decoration: BoxDecoration(
-                      color: Colors.black54,
+                      color: Colors.white,
                       border: Border.all(color: Colors.white, width: 5.0),
                     ),
-                    child: RTCVideoView(_localRenderer,
-                        mirror: true,
-                        objectFit:
-                            RTCVideoViewObjectFit.RTCVideoViewObjectFitCover),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: RTCVideoView(_localRenderer,
+                          mirror: true,
+                          objectFit:
+                              RTCVideoViewObjectFit.RTCVideoViewObjectFitCover),
+                    ),
                   ),
                 ),
               ),
