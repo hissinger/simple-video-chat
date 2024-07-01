@@ -21,16 +21,16 @@ class _HomePageState extends State<HomePage> {
           children: [
             TextField(
               controller: _nameController,
-              decoration: const InputDecoration(labelText: '이름'),
+              decoration: const InputDecoration(labelText: 'Username'),
             ),
             const SizedBox(height: 16),
             TextField(
               controller: _roomController,
-              decoration: const InputDecoration(labelText: '방 번호'),
+              decoration: const InputDecoration(labelText: 'Room ID'),
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              child: const Text('통화 참여'),
+              child: const Text('Join Call'),
               onPressed: () {
                 Navigator.push(
                   context,
